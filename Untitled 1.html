@@ -1,0 +1,40 @@
+<DOCTYPE>
+<html>
+    <head>
+        <title>Bouncing Chengwang</title>
+    </head>
+    <body>
+        <IMG ID="ball" STYLE="position: absolute; left: 600; top: 0; width: 200; height: 200;" SRC="Chengwang.jpg">
+            <script> 
+                console.log ("hello world")
+                var myBall = document.getElementById("ball")
+                var direction =0;
+                var StepSize = 1;
+                var interval = 15;
+                var loc = -100;
+                setInterval("myFunction()", interval);
+                function myFunction()
+                {
+                      if(0 == direction)
+   {
+      loc += 10;
+      if(loc >= 500)
+      {
+         direction = 1;
+      }
+   }
+   else
+   {
+      loc -= 10;
+      if(loc < 10)
+      {
+         direction = 0;
+      }
+   }
+
+   myBall.style.top = loc;
+                }
+    console.log ("works")
+            </script>
+    </body>
+</html>
